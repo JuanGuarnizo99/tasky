@@ -91,6 +91,14 @@ function Modal({ mode, setShowModal, task, getData }) {
             onChange={handleChange}
           />
           <br />
+          <input
+            required
+            type="date"
+            name="date"
+            value={data.date}
+            onChange={handleChange}
+          ></input>
+          <br />
 
           <input className={mode} type="submit" />
         </form>
