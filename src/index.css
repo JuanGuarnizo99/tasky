@@ -5,6 +5,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:auto;
 }
 
 .app{
@@ -12,14 +13,21 @@ body {
     box-shadow: rgba(100, 151, 177, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
     border-radius: 10px;
     padding: 10px;
-    width: 700px;
+    width:min-content;
     margin-top: 50px;
 }
 
-.button-container, .info-container{
+.info-container{
     display:flex;
-    align-items:flex-start;
+    align-items:center;
 
+}
+
+.button-container{
+    display:flex;
+    justify-content: end;
+    align-items:center;
+    height: parent;
 }
 
 /* button that lives inside a button container */
@@ -112,7 +120,7 @@ input {
     display: flex;
     justify-content: space-between;
     border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
-    float:left;
+    /* float:left; */
     margin: 10px;
 }
 
@@ -254,9 +262,26 @@ input {
 
 }
 
+.progress-percentage{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 10px;
+}
+
+.checkbox{
+    margin: 10px;
+    border-radius: 12px;
+}
+
 .task-title {
     margin: 10px;
-    width: 300px;
+    width: 150px;
+}
+
+.due-date {
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    width: 100px;
 }
 
 .banner {
