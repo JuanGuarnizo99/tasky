@@ -30,10 +30,11 @@ function ListItem({task, getData}) {
     <li className="list-item">
       <div className="info-container">
         {/* <TickIcon></TickIcon> */}
-        <input type="checkbox"></input>
-        <p className="task-title">{task.title}</p>
+        <input className="checkbox" type="checkbox"></input>
+        <p className="task-title">{task.title}</p> 
+        <p className="progress-percentage">{task.progress}%</p>
         <ProgressBar progress={task.progress}></ProgressBar>
-        <p>Due {task.date}</p>
+        <p className="due-date">Due {task.date}</p>
       </div>
 
       {/* button container */}
