@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TickIcon from "./TickIcon";
+// import TickIcon from "./TickIcon";
 import ProgressBar from "./ProgressBar";
 import Modal from "./Modal";
 
@@ -29,9 +29,11 @@ function ListItem({task, getData}) {
   return (
     <li className="list-item">
       <div className="info-container">
-        <TickIcon></TickIcon>
+        {/* <TickIcon></TickIcon> */}
+        <input type="checkbox"></input>
         <p className="task-title">{task.title}</p>
         <ProgressBar progress={task.progress}></ProgressBar>
+        <p>Due {task.date}</p>
       </div>
 
       {/* button container */}
