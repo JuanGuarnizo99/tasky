@@ -33,7 +33,7 @@ function ListItem({task, getData}) {
         <input type="checkbox"></input>
         <p className="task-title">{task.title}</p>
         <ProgressBar progress={task.progress}></ProgressBar>
-        <p>Due {task.date.split('T')[0]}</p>
+        <p>Due {task.date}</p>
       </div>
 
       {/* button container */}
