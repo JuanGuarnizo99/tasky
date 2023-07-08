@@ -41,12 +41,12 @@ const App = () => {
 
   return (
     <div className="app">
-      <Banner></Banner>
+      <Banner getData={getData}></Banner>
       {!authToken && <Auth></Auth>}
       {/* Only shows if auth token exists */}
       {authToken && (
         <>
-          <ListHeader listName={" 👨‍💻 My To Do "} getData={getData} />
+          <ListHeader listName={" 👨‍💻 My To Do "} />
           <p className="user-email">Welcome back {userEmail}</p>
           {sortedTasks?.map((task) => (
             <ListItem key={task.id} task={task} getData={getData} />
