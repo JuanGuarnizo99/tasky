@@ -41,7 +41,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <Banner getData={getData}></Banner>
+      <Banner getData={getData} authToken={authToken}></Banner>
       {!authToken && <Auth></Auth>}
       {/* Only shows if auth token exists */}
       {authToken && (
