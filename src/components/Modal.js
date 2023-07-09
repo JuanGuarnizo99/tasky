@@ -62,6 +62,12 @@ function Modal({ mode, setShowModal, task, getData }) {
     console.log(data);
   };
 
+  const getToday = () => {
+    const today = new Date().toJSON().split('T')[0];
+    console.log(today);
+    return today;
+  }
+
   return (
     <div className="overlay">
       <div className="modal">
@@ -86,10 +92,20 @@ function Modal({ mode, setShowModal, task, getData }) {
             type="range"
             min="0"
             max="100"
+            step="10"
             name="progress"
             value={data.progress}
             onChange={handleChange}
           />
+          <br />
+          <input
+            required
+            type="date"
+            name="date"
+            value={data.date}
+            min={getToday()}
+            onChange={handleChange}
+          ></input>
           <br />
 
           <input className={mode} type="submit" />
