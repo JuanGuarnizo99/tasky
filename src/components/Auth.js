@@ -56,7 +56,7 @@ function Auth() {
           <input type="email" placeholder="email" onChange={(e) => setEmail(e.target.value)}/>
           <input type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)}/>
           {!isLogIn && <input type="password" placeholder="confirm password" onChange={(e) => setConfirmPassword(e.target.value)}/>}
-          <input type="submit" value={isLogIn? "Log in" : "Sign up"} className="create"/>
+          <input type="submit" value={isLogIn? "Log in" : "Sign up"} className="create" disabled={!email || !password}/>
           {error && <p>{error}</p>}
         </form>
         <div className="auth-options">
