@@ -3,6 +3,7 @@ A simple and intuitive todo list application designed to help you stay organized
 ## Technologies used
 The main framework used to create this frontend application was React.  
 I also used a bit of css to style the components but most of the code is React.  
+To use this app just go to https://tasky-app.onrender.com and sign up.  
 I also wrote the code for the backend application.  
 You can have a look at the backend repo at https://github.com/JuanGuarnizo99/tasky-api
 ## Contributing
