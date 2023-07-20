@@ -39,7 +39,7 @@ function ListItem({task, getData}) {
     <li className="list-item">
       <div className="info-container">
         {/* <TickIcon></TickIcon> */}
-        <input className="checkbox" onChange={setProgress(this.checked)} type="checkbox"></input>
+        <input className="checkbox" onChange={setProgress(this.props.checked)} type="checkbox"></input>
         <p className="task-title">{task.title}</p> 
         <p className="progress-percentage">{task.progress}%</p>
         <ProgressBar progress={task.progress}></ProgressBar>
