@@ -17,7 +17,7 @@ function Modal({ mode, setShowModal, task, getData }) {
   const postData = async (e) => {
     e.preventDefault();
 
-    await fetch(`${process.env.REACT_APP_SERVERURL}/todos`, {
+    await fetch(`${process.env.REACT_APP_SERVERURL}/tasks/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ function Modal({ mode, setShowModal, task, getData }) {
   // Edits a task object
   const editData = async (e) => {
     e.preventDefault();
-    await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${task.id}`, {
+    await fetch(`${process.env.REACT_APP_SERVERURL}/tasks/edit/${task.id}`, {
       method: "PUT",
       headers: {"content-type": "application/json"},
       body: JSON.stringify(data),
