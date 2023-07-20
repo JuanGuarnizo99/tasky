@@ -10,6 +10,8 @@ function ListItem({task, getData}) {
 
   const [showModal, setShowModal] = useState(false);
 
+  const [isChecked, setIsChecked] = useState(false);
+
   // Deletes a task object
   const deleteData = async (e) => {
     e.preventDefault();
@@ -25,8 +27,9 @@ function ListItem({task, getData}) {
    .catch((err) => console.error(err));
   };
 
-  const setProgress = (checked) => {
-    if(checked === true) {
+  const setProgress = () => {
+    setIsChecked(!isChecked);
+    if(isChecked) {
       task.progress = 100;
     }
     else{
@@ -39,7 +42,7 @@ function ListItem({task, getData}) {
     <li className="list-item">
       <div className="info-container">
         {/* <TickIcon></TickIcon> */}
-        <input className="checkbox" onChange={setProgress(this.props.checked)} type="checkbox"></input>
+        <input className="checkbox" checked={isChecked} onChange={setProgress()} type="checkbox"></input>
         <p className="task-title">{task.title}</p> 
         <p className="progress-percentage">{task.progress}%</p>
         <ProgressBar progress={task.progress}></ProgressBar>
