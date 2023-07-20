@@ -25,12 +25,21 @@ function ListItem({task, getData}) {
    .catch((err) => console.error(err));
   };
 
+  const setProgress = (checked) => {
+    if(checked === true) {
+      task.progress = 100;
+    }
+    else{
+      task.progress = 0;
+    }
+  }
+
 
   return (
     <li className="list-item">
       <div className="info-container">
         {/* <TickIcon></TickIcon> */}
-        <input className="checkbox" type="checkbox"></input>
+        <input className="checkbox" onChange={setProgress(this.checked)} type="checkbox"></input>
         <p className="task-title">{task.title}</p> 
         <p className="progress-percentage">{task.progress}%</p>
         <ProgressBar progress={task.progress}></ProgressBar>
